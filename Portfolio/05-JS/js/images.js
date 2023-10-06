@@ -8,7 +8,7 @@ var myGamePiece;
 
 // Canvas and game initialization
 function startGame() {
-  myGamePiece = new component(30, 30, "../images/smiley.gif", 10, 120, "image");
+  myGamePiece = new component(30, 30, "./images/smiley.gif", 10, 120, "image");
   myGameArea.start();
 }
 

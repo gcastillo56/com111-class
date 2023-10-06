@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Express Authentication, Cookies & Session
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Using the provided code, crete an app with:
+  - A simple registration form that asks the user for a username, email and password.
+  - Using **passport-local-mongoose** save the information in our database and set the **session** information
+    - Once the user is registered, he should be granted access to the secrets page
+  - Crate a form that will allow the just registered user to access the page only with its user and password.
+  - Implement a _logout_ method
+  - Check that you can no access the page with the path directly in the browser, and that if you are trying to access without authorization, you are sent to either register or login.
+- Setup your secret phrase using a _.env_ file
+- Implement a **google oauth 2.0** strategy and make sure that your user is able to access our page when he is authorized and not when he has not been granted access.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### Using OAuth 2.0
 
-### `npm start`
+- To configure our app:
+  1. Get our key from the 3rd party provider, in dev console APP_ID/CLIENT_ID
+  2. Redirect to authenticate to the provider login
+  3. Log in the service provider
+  4. User grants permissions
+  5. Receive Authorization from 3rd party
+  6. Exchange Authorzation code by an Access token
+- To use google auth 2.0:
+  - Register our app on google console
+  - Create new project
+  - Go to: APIs and Services > Credentials
+    - Configure the OAuth consent screen
+      1. Name
+      2. Logo
+      3. Dev & support email
+      4. Configure scopes: email, profile, openid
+    - Create credentials: OAuth
+      - App type: web
+      - Name
+      - Authorized JS origins: localhost:3000
+      - Authorized redirect URIs: localhost:3000/auth/google/secrets
+    - Download JSON
+- Add CLIENT_ID and CLIENT_SECRET to .env file
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Cookies
 
-### `npm test`
+- Using **cookie-parser** add a cookie to our session
+- Check in Chrome's dev tools the value of the cookie we set to validate that we are indeed adding or removing data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Extra
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Implement a new secret section where you can submit some information and it is safely stored in the db and retrieved again when you access the user.

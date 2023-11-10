@@ -3,7 +3,7 @@
 Bootstrap is a very dynamic and responsive library.
 
 As explained in class this library allows for quick design and implementation given a big list of examples and clear explanation on how to customize them.
-In this exercise you need to implement at least one of these components
+In this exercise you need to implement at least one of each of these components
 
 - Navbar and/or tabs
 - Accordion

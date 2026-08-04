@@ -11,5 +11,8 @@
     "keywords": [],
     "author": "GCastillo",
     "license": "ISC",
-    "type": "commonjs"
+    "type": "commonjs",
+    "dependencies": {
+        "concurrently": "^9.2.4"
+    }
 }

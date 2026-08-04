@@ -1,0 +1,15 @@
+{
+    "name": "mern-app",
+    "version": "1.0.0",
+    "description": "A mern app with a Next.js frontend and an Express backend",
+    "scripts": {
+        "install:all": "npm install --prefix client && npm install --prefix server",
+        "dev:frontend": "npm run client --prefix client",
+        "dev:server": "npm run server --prefix server",
+        "dev": "concurrently \"npm run dev:server\" \"npm run dev:frontend\""
+    },
+    "keywords": [],
+    "author": "GCastillo",
+    "license": "ISC",
+    "type": "commonjs"
+}

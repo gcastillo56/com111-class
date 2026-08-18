@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainCart - Secure Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Secure Checkout</h2>
+        </div>
+        <div class="cart-summary">
+            <div class="item-row">
+                <span class="item-title">SDG Eco-friendly Water Bottle</span>
+                <span class="item-price">$24.99</span>
+            </div>
+            <div class="item-row" style="font-size: 0.8rem; color: #868e96;">
+                <span>Subtotal:</span>
+                <span>$24.99</span>
+            </div>
+        </div>
+        <form action="#" method="POST" id="checkout-form">
+            <div class="optional-add-on">
+                <input type="checkbox" name="vip_warranty" id="vip_warranty" checked style="margin-top: 4px; margin-right: 10px;">
+                <div class="add-on-text">
+                    <label for="vip_warranty" class="add-on-label">Add VIP Carbon-Offset Protection Plan</label>
+                    Protects your shipment and offsets delivery emissions. Adds just <strong>$4.99/month</strong> as a recurring subscription charge.
+                </div>
+            </div>
+            <div class="shipping-selector">
+                <span class="shipping-label">Choose Delivery Speed:</span>
+                <div class="shipping-options">
+                    <label class="shipping-box-express">
+                        <div>
+                            <input type="radio" name="shipping_speed" value="express" checked style="margin-right: 8px;">
+                            <strong>Ultra-Fast Shipping (Emissions Offset!)</strong>
+                        </div>
+                        <span style="font-weight: bold; color: #2f9e44;">$14.99</span>
+                    </label>
+                    <label class="shipping-box-standard">
+                        <div>
+                            <input type="radio" name="shipping_speed" value="standard" style="margin-right: 8px;">
+                            <span>Eco-Standard Saver (Un-carbon-offsetted)</span>
+                        </div>
+                        <span>$2.99</span>
+                    </label>
+                </div>
+            </div>
+            <div class="confirmshame-container">
+                <input type="checkbox" name="tree_donation" id="tree_donation" checked>
+                <label for="tree_donation">
+                    Yes, I want to plant 1 tree. Or check here to state that you do not care about deforestation or the future of endangered local wildlife species.
+                </label>
+            </div>
+            <div class="newsletter-optout">
+                <input type="checkbox" name="no_opt_out" id="no_opt_out">
+                <label for="no_opt_out">
+                    Check this box if you do NOT wish to unsubscribe from our weekly partner spam, unsolicited marketing notifications, and third-party tracking networks.
+                </label>
+            </div>
+            <div class="roach-motel-notice">
+                * Note: Your recurring VIP Protection subscription can only be cancelled by sending a notarized physical letter to our registry office in Vaduz, Liechtenstein, or by calling our customer hotline between 2:00 AM and 3:00 AM Central European Time.
+            </div>
+
+            <div class="checkout-actions">
+                <button type="submit" class="btn-checkout">
+                    Confirm Order & Pay $24.99
+                </button>
+                <div style="font-size: 0.65rem; color: #adb5bd; text-align: center; margin-top: 10px;">
+                    By clicking checkout you agree to pay an additional $8.95 dynamic server processing fee and local service surcharges (added during payment parsing).
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script>
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            // Prevent the form from submitting and refreshing the page
+            event.preventDefault();
+            const baseProductPrice = 24.99;
+            const vipChecked = document.getElementById('vip_warranty').checked;
+            const vipPrice = vipChecked ? 4.99 : 0.00;
+            const selectedShippingInput = document.querySelector('input[name="shipping_speed"]:checked');
+            const shippingSpeed = selectedShippingInput ? selectedShippingInput.value : 'none';
+            const shippingPrice = shippingSpeed === 'express' ? 14.99 : 2.99;
+            const treeChecked = document.getElementById('tree_donation').checked;
+            const treePrice = treeChecked ? 1.00 : 0.00;
+            const hiddenProcessingFee = 8.95;
+            // Compute actual total
+            const actualTotal = baseProductPrice + vipPrice + shippingPrice + treePrice + hiddenProcessingFee;
+            // Format breakdown report
+            const alertReport = 
+                "⚠️ COERCIVE DARK-PATTERN AUDIT DETECTED!\n\n" +
+                "You clicked 'Confirm Order & Pay $24.99', but your account is actually about to be charged:\n\n" +
+                `  • Base Product (Eco Bottle): $${baseProductPrice.toFixed(2)}\n` +
+                `  • Sneaked-In VIP Warranty:    $${vipPrice.toFixed(2)} (Recurring subscription!)\n` +
+                `  • Chosen Shipping Speed:     $${shippingPrice.toFixed(2)} (${shippingSpeed.toUpperCase()})\n` +
+                `  • Confirm-shamed Donation:    $${treePrice.toFixed(2)}\n` +
+                `  • Undisclosed Server Fee:     $${hiddenProcessingFee.toFixed(2)} (Dynamic Surcharge)\n\n` +
+                "  -----------------------------------------------\n" +
+                `  💰 ACTUAL TOTAL CHARGE:        $${actualTotal.toFixed(2)}\n\n` +
+                "This layout violates Web Design Ethics. Refactor this form immediately to restore user autonomy!";
+            // Display warning to student
+            alert(alertReport);
+        });
+    </script>
+</body>
+</html>

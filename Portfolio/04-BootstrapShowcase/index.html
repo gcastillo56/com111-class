@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainHub - SDG Sprints</title>
+    <!-- Bootstrap 5.3 CDN CSS Hook -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <!-- NAVIGATION SKELETON -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#">SustainHub</a>
+            <div id="sdgNav">
+                <ul>
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SDG Targets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Action Hub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN LAYOUT GRID -->
+    <div class="container my-5">
+        
+        <!-- CHALLENGE PART A: HERO CONTENT & CAROUSEL -->
+        <!-- Instructions: Create a responsive row. On large screens, the text description 
+             should take up 5 columns, and a slide Carousel should take up 7 columns. 
+             On mobile screens, they should stack vertically (12 columns each). -->
+        <div class="row align-items-center">
+            
+            <div class="col-12">
+                <!-- HERO TEXT COLUMN (Needs responsive col declarations) -->
+                <h1>Support SDG Goal 13: Climate Action</h1>
+                <p class="lead">Our planet is facing unprecedented environmental challenges. Join the SustainHub community sprint to develop software integrations that track local emissions, organize dynamic community-led restoration events, and shut down dark patterns in greenwashed marketing pipelines.</p>
+                
+                <!-- Action Buttons: Enforce contrast rules and semantic colors -->
+                <!-- Task: Add a primary action button and a secondary outline button -->
+                <div class="my-3">
+                    <!-- ADD BUTTONS HERE -->
+                </div>
+            </div>
+
+            <div class="col-12">
+                <!-- CAROUSEL COMPONENT COLUMN (Needs responsive col declarations) -->
+                <!-- Task: Insert a Bootstrap Carousel component inside this column slot.
+                     Configure 3 slides with custom climate target labels. -->
+                <div class="border p-3 text-center text-muted bg-white rounded">
+                    [Carousel Component Slot - Students Must Build the Slides, Indicators, and Prev/Next Controls Here]
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CHALLENGE PART B: ACTION CARDS SECTION -->
+        <!-- Instructions: Create a grid below containing three action cards. 
+             - On desktop (lg): Display as 3 equal columns (4 columns each in the 12-col system).
+             - On tablet (md): Display as a 2-column layout (First two cards side-by-side, third card wrapping below).
+             - On mobile (xs/sm): Display stacked vertically (12 columns each). -->
+        <h2 class="my-5 text-center">Community Solutions</h2>
+        <div class="row g-4">
+            
+            <!-- Card 1 Slot -->
+            <div class="col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Forest Restoration</h5>
+                        <p class="card-text">Organize tree planting drives and analyze canopy coverage metrics dynamically using public satellite datasets.</p>
+                        <!-- Button goes here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 Slot -->
+            <div class="col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Energy Trackers</h5>
+                        <p class="card-text">Develop software dashboards for businesses to log real-time energy expenditures and locate carbon bottlenecks.</p>
+                        <!-- Button goes here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 Slot -->
+            <div class="col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Ocean Cleanups</h5>
+                        <p class="card-text">Map localized plastic deposition vectors and coordinate volunteer cleanup deployments on regional shorelines.</p>
+                        <!-- Button goes here -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body {
+    background-color: #f8f9fa;
+}
+.calculator-card {
+    max-width: 500px;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: #ffffff;
+}
+.code-box {
+    background-color: #212529;
+    color: #f8f9fa;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}

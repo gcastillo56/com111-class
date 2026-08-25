@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COM111: Callback Calculator Lab</title>
+    <!-- Bootstrap 5.3 CSS for beautiful UI layouts (from Session 6) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="py-5">
+
+    <div class="container d-flex flex-column align-content-center justify-content-center min-vh-100">
+        <div class="calculator-card mx-auto p-4 w-100">
+
+            <!-- Header -->
+            <header class="text-center mb-4">
+                <span class="badge bg-primary mb-2">Session 7 Lab Task</span>
+                <h1 class="h3 fw-bold text-dark">Higher-Order Calculator</h1>
+                <p class="text-muted small">
+                    Implement callback functions to drive this interactive math engine!
+                </p>
+            </header>
+
+            <!-- Interactive UI Form -->
+            <div class="row g-3">
+                <!-- Input 1 -->
+                <div class="col-6">
+                    <label for="num1" class="form-label fw-semibold">Value A:</label>
+                    <input type="number" id="num1" class="form-control" placeholder="e.g. 10">
+                </div>
+
+                <!-- Input 2 -->
+                <div class="col-6">
+                    <label for="num2" class="form-label fw-semibold">Value B:</label>
+                    <input type="number" id="num2" class="form-control" placeholder="e.g. 5">
+                </div>
+
+                <!-- Callback Selector -->
+                <div class="col-12">
+                    <label for="operation" class="form-label fw-semibold">Select Operation Callback:</label>
+                    <select id="operation" class="form-select">
+                        <option value="">-- Choose Callback --</option>
+                        <option value="add">add(a, b) ➜ Addition</option>
+                        <option value="subtract">subtract(a, b) ➜ Subtraction</option>
+                        <option value="multiply">multiply(a, b) ➜ Multiplication</option>
+                        <option value="divide">divide(a, b) ➜ Division</option>
+                    </select>
+                </div>
+
+                <!-- Action Button -->
+                <div class="col-12 mt-4">
+                    <button id="calculate-btn" class="btn btn-primary w-100 py-2.5 fw-bold">
+                        Execute Higher-Order Engine
+                    </button>
+                </div>
+            </div>
+
+            <!-- Result Display Block -->
+            <div class="mt-4 pt-3 border-top">
+                <div id="result-status" class="alert alert-secondary text-center mb-0" role="alert">
+                    Enter values and select a callback operation to execute calculations.
+                </div>
+            </div>
+
+            <!-- In-class Cheat Sheet Reference -->
+            <div class="mt-4">
+                <label class="form-label fw-semibold text-muted small">Engine Signature Context:</label>
+                <div class="code-box">
+                    calculator(numA, numB, callbackFunction)
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/calculator.js"></script>
+</body>
+</html>

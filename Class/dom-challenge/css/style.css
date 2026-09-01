@@ -1,0 +1,21 @@
+body {
+    background-color: #f1f3f5;
+}
+.board-container {
+    max-width: 650px;
+    margin: 40px auto;
+}
+/* Completed state visual indicators */
+.impact-card.completed {
+    background-color: #e9ecef !important;
+    opacity: 0.65;
+    border-left: 5px solid #6c757d !important;
+}
+.impact-card.completed .card-title {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+/* Active priority indicators */
+.priority-high { border-left: 5px solid #dc3545; }
+.priority-medium { border-left: 5px solid #ffc107; }
+.priority-low { border-left: 5px solid #198754; }

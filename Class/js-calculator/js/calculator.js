@@ -1,4 +1,4 @@
- // ==========================================
+// ==========================================
 // 1. UI SELECTORS
 // ==========================================
 const num1Input = document.getElementById('num1');
@@ -8,7 +8,7 @@ const calculateBtn = document.getElementById('calculate-btn');
 const resultStatus = document.getElementById('result-status');
 
 // ==========================================
-// 2. TODO: BASIC CALLBACK MATH FUNCTIONS (Students write these)
+// 2. TODO: BASIC CALLBACK MATH FUNCTIONS 
 // ==========================================
 
 // TODO: Write "add" callback expression (a, b) => ...
@@ -25,7 +25,7 @@ const resultStatus = document.getElementById('result-status');
 
 
 // ==========================================
-// 3. TODO: HIGHER-ORDER FUNCTION ENGINE (Students write this)
+// 3. TODO: HIGHER-ORDER FUNCTION ENGINE 
 // ==========================================
 
 // TODO: Write the "calculator" orchestrator function
@@ -37,7 +37,7 @@ const resultStatus = document.getElementById('result-status');
 
 
 // ==========================================
-// 4. TODO: EVENT OBSERVER & INTEGRATION WIRING (Students write this)
+// 4. TODO: EVENT OBSERVER & INTEGRATION WIRING 
 // ==========================================
 calculateBtn.addEventListener('click', () => {
     alert('click');

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainHub: Asynchronous Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container" style="max-width: 650px;">
+        <div class="custom-card p-4 mx-auto">
+            
+            <!-- Header -->
+            <header class="text-center mb-4">
+                <span class="badge bg-success mb-2">Lab Task </span>
+                <h1 class="h3 fw-bold text-dark">Cascading Asynchronous Streams</h1>
+                <p class="text-muted small">
+                    Select a scientist to trigger dependent asynchronous telemetry queries.
+                </p>
+            </header>
+
+            <!-- Interactive Selector (Stream 1 Target) -->
+            <div class="mb-4">
+                <label for="scientist-selector" class="form-label fw-semibold">Select Research Director (Stream 1):</label>
+                <select id="scientist-selector" class="form-select">
+                    <option value="">-- Fetching Scientist Registry... --</option>
+                </select>
+            </div>
+
+            <!-- Telemetry Results Card (Stream 2 Target) -->
+            <div id="results-display" class="border rounded p-4 bg-white text-center">
+                <p class="text-muted mb-0">Please select a research director from the registry above.</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/async.js"></script>
+</body>
+</html>

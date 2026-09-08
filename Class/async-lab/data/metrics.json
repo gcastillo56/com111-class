@@ -1,0 +1,7 @@
+[
+  { "id": "met-01", "scientistId": "sci-101", "region": "Amazon Basin", "offsetTons": 1420, "confidenceIndex": "High" },
+  { "id": "met-02", "scientistId": "sci-101", "region": "Siberian Taiga", "offsetTons": 850, "confidenceIndex": "Medium" },
+  { "id": "met-03", "scientistId": "sci-102", "region": "Mangrove Canopy, Sumatra", "offsetTons": 2100, "confidenceIndex": "High" },
+  { "id": "met-04", "scientistId": "sci-103", "region": "Landfill Bioreactor, Delhi", "offsetTons": 980, "confidenceIndex": "High" },
+  { "id": "met-05", "scientistId": "sci-103", "region": "Agricultural Digester, Iowa", "offsetTons": 450, "confidenceIndex": "Low" }
+]

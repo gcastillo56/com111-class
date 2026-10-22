@@ -1,0 +1,32 @@
+/* Scrollable Catalog Container */
+.catalog-scroll-container {
+  max-height: 72vh;
+  overflow-y: auto;
+}
+
+/* Card Interactivity */
+.char-card {
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.char-card:hover {
+  transform: translateY(-4px);
+  border-color: #dc3545 !important;
+}
+
+.char-card-img {
+  height: 110px;
+  object-fit: contain;
+}
+
+/* Detail Modal Styles */
+.characters-detail-img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.moves-scroll-box {
+  max-height: 130px;
+  overflow-y: auto;
+}

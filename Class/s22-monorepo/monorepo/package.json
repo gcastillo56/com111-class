@@ -1,0 +1,22 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"API,WEB\" -c \"cyan,magenta\" \"npm run dev --workspace=@repo/backend\" \"npm run dev --workspace=@repo/frontend\"",
+    "build": "npm run build --workspaces --if-present",
+    "start:api": "npm run start --workspace=@repo/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.2"
+  },
+  "keywords": [],
+  "author": "gcastillo",
+  "license": "ISC",
+  "type": "commonjs"
+}
